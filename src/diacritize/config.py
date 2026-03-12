@@ -4,9 +4,10 @@ from pathlib import Path
 
 # ── Paths ──────────────────────────────────────────────────────────────────────
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
-DATA_DIR = PROJECT_ROOT / "data"
-MODELS_DIR = PROJECT_ROOT / "models"
+_PACKAGE_DIR = Path(__file__).resolve().parent
+ASSETS_DIR = _PACKAGE_DIR / "assets"
+DATA_DIR = ASSETS_DIR
+MODELS_DIR = ASSETS_DIR
 
 # ── Arabic Diacritic Unicode Constants ─────────────────────────────────────────
 # Combining marks that appear after a base character in Unicode

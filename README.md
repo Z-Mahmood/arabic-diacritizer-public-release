@@ -1,5 +1,9 @@
 # Arabic Diacritizer
 
+[![PyPI version](https://img.shields.io/pypi/v/arabic-diacritizer.svg)](https://pypi.org/project/arabic-diacritizer/)
+[![Python versions](https://img.shields.io/pypi/pyversions/arabic-diacritizer.svg)](https://pypi.org/project/arabic-diacritizer/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 Automatic Arabic diacritization (tashkeel) using a **BiLSTM + Bahdanau attention** model with a **sentence cache** — achieves **6.6% DER**, beating GPT-5.3's 20.9%.
 
 ## Features
@@ -14,9 +18,12 @@ Automatic Arabic diacritization (tashkeel) using a **BiLSTM + Bahdanau attention
 ## Quick Start
 
 ```bash
-# Clone and install
-git clone https://github.com/Z-Mahmood/arabic-diacritizer.git
-cd arabic-diacritizer
+# Install from PyPI
+pip install arabic-diacritizer
+
+# Or install from source
+git clone https://github.com/Z-Mahmood/arabic-diacritizer-public-release.git
+cd arabic-diacritizer-public-release
 pip install -e .
 
 # Diacritize text
@@ -91,12 +98,11 @@ arabic-diacritizer/
 │   ├── cache.py            # Sentence cache with multi-variant support
 │   ├── tokenizer.py        # Character-level tokenizer (53 tokens)
 │   ├── evaluate.py         # DER, WER, per-diacritic accuracy metrics
+│   ├── assets/
+│   │   ├── bilstm_best.pt      # Trained weights (18MB)
+│   │   └── word_cache.json.gz   # Sentence cache (29MB)
 │   └── baseline/
 │       └── model.py        # BiLSTM + Bahdanau Attention (~15M params)
-├── models/
-│   └── bilstm_best.pt      # Trained weights (18MB)
-├── data/
-│   └── word_cache.json      # Sentence cache (28MB)
 └── tests/                   # Unit tests for all modules
 ```
 

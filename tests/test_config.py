@@ -15,8 +15,9 @@ from diacritize.config import (
     ID_TO_LABEL,
     NUM_CLASSES,
     BASELINE_DEFAULTS,
+    ASSETS_DIR,
     DATA_DIR,
-    PROJECT_ROOT,
+    MODELS_DIR,
 )
 
 
@@ -112,8 +113,11 @@ class TestModelDefaults:
 
 
 class TestPaths:
-    def test_project_root_is_arabic_diacritizer_dir(self):
-        assert PROJECT_ROOT.name == "arabic-diacritizer"
+    def test_assets_dir_exists(self):
+        assert ASSETS_DIR.exists()
 
-    def test_data_dir_is_under_project(self):
-        assert DATA_DIR.parent == PROJECT_ROOT
+    def test_data_dir_is_assets(self):
+        assert DATA_DIR == ASSETS_DIR
+
+    def test_models_dir_is_assets(self):
+        assert MODELS_DIR == ASSETS_DIR
