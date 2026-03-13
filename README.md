@@ -4,11 +4,11 @@
 [![Python versions](https://img.shields.io/pypi/pyversions/arabic-diacritizer.svg)](https://pypi.org/project/arabic-diacritizer/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Automatic Arabic diacritization (tashkeel) using a **BiLSTM + Bahdanau attention** model with a **sentence cache** — achieves **6.6% DER**, beating GPT-5.3's 20.9%.
+Automatic Arabic diacritization (tashkeel) using a **BiLSTM + Bahdanau attention** model with a **sentence cache**.
 
 ## Features
 
-- **6.6% Diacritic Error Rate** — outperforms GPT-5.3 (20.9% DER) on the Tashkeela benchmark
+- **Outperforms LLMs** — outperforms GPT-5.3 (20.9% DER) on the Tashkeela benchmark
 - **Sentence cache + model hybrid** — cached sentences return instantly, BiLSTM handles the rest
 - **15-class diacritic prediction** — fatha, damma, kasra, sukun, shadda, tanween, and shadda compounds
 - **CLI + Python API** — use from the terminal or import as a library
