@@ -7,7 +7,7 @@ The BiLSTM reads the character sequence in both directions. The attention
 mechanism lets each position attend to the full sequence when making its
 prediction. The final linear layer outputs 15 class logits (one per diacritic).
 
-~15M parameters. Trains in ~3.5 hrs on RTX 5080.
+~4.5M parameters. Trains in ~3.5 hrs on RTX 5080.
 """
 
 from __future__ import annotations

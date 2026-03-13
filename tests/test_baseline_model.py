@@ -52,9 +52,9 @@ class TestBiLSTMDiacritizer:
         assert logits.shape == (2, 15, NUM_CLASSES)
 
     def test_parameter_count_reasonable(self, model):
-        """Should be roughly 10-20M params for default config."""
+        """Should be roughly 4-5M params for default config."""
         params = model.count_parameters()
-        assert 1_000_000 < params < 30_000_000, f"Got {params:,} params"
+        assert 3_000_000 < params < 6_000_000, f"Got {params:,} params"
 
     def test_padding_idx_zero(self, model):
         """Embedding for PAD (index 0) should be all zeros."""

@@ -102,7 +102,7 @@ arabic-diacritizer/
 │   │   ├── bilstm_best.pt      # Trained weights (18MB)
 │   │   └── word_cache.json.gz   # Sentence cache (29MB)
 │   └── baseline/
-│       └── model.py        # BiLSTM + Bahdanau Attention (~15M params)
+│       └── model.py        # BiLSTM + Bahdanau Attention (~4.5M params)
 └── tests/                   # Unit tests for all modules
 ```
 
